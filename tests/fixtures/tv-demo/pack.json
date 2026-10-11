@@ -1,0 +1,9 @@
+{
+  "id": "tv-demo",
+  "type": "tv",
+  "name": "Demo TV",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Synthetic fixture only.",
+  "changes": ["Initial synthetic fixture"]
+}

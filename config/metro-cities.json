@@ -1,0 +1,9 @@
+[
+  {"id": "bengaluru", "name": "Bengaluru", "packId": "metro-bengaluru"},
+  {"id": "chennai", "name": "Chennai", "packId": "metro-chennai"},
+  {"id": "delhi-ncr", "name": "Delhi NCR", "packId": "metro-delhi-ncr"},
+  {"id": "hyderabad", "name": "Hyderabad", "packId": "metro-hyderabad"},
+  {"id": "kochi", "name": "Kochi", "packId": "metro-kochi"},
+  {"id": "pune", "name": "Pune", "packId": "metro-pune"},
+  {"id": "ahmedabad-gandhinagar", "name": "Ahmedabad–Gandhinagar", "packId": "metro-ahmedabad-gandhinagar"}
+]

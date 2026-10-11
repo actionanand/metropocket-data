@@ -1,0 +1,9 @@
+{
+  "id": "tv-channels",
+  "type": "tv",
+  "name": "India TV Channels",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Region-aware DTH and cable channel mappings.",
+  "changes": []
+}

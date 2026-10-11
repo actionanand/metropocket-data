@@ -1,0 +1,12 @@
+{
+  "id": "metro-city-id",
+  "type": "metro",
+  "name": "City Metro",
+  "version": 1,
+  "schemaVersion": 1,
+  "city": "City",
+  "networkAsOf": "YYYY-MM-DD",
+  "defaultEdgeMinutes": 3,
+  "description": "Operational metro network snapshot.",
+  "changes": []
+}

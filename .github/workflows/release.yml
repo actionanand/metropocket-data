@@ -1,0 +1,37 @@
+name: Release data packs
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'New GitHub release tag, for example v1'
+        required: true
+        type: string
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests
+        run: python -m unittest discover -s tests -v
+      - name: Validate production sources
+        run: python scripts/validate_sources.py
+      - name: Build release assets
+        run: |
+          python scripts/build_all.py             --output dist             --repository "${GITHUB_REPOSITORY}"             --tag "${{ inputs.tag }}"             --require-packs
+      - name: Show manifest
+        run: cat dist/manifest.json
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_TAG: ${{ inputs.tag }}
+        run: |
+          test -n "$RELEASE_TAG"
+          gh release create "$RELEASE_TAG" dist/*             --title "MetroPocket Data $RELEASE_TAG"             --notes "Versioned offline data packs for MetroPocket."

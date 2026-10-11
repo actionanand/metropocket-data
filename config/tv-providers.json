@@ -1,0 +1,21 @@
+[
+  {"id": "jiotv-plus", "name": "JioTV+", "kind": "dth"},
+  {"id": "tata-play", "name": "Tata Play", "kind": "dth"},
+  {"id": "airtel-digital-tv", "name": "Airtel Digital TV", "kind": "dth"},
+  {"id": "sun-direct", "name": "Sun Direct", "kind": "dth"},
+  {"id": "dish-tv", "name": "Dish TV", "kind": "dth"},
+  {"id": "d2h", "name": "d2h", "kind": "dth"},
+  {"id": "tactv", "name": "TACTV", "kind": "cable"},
+  {"id": "tccl-scv", "name": "TCCL / SCV", "kind": "cable"},
+  {"id": "kal-cables", "name": "KAL Cables", "kind": "cable"},
+  {"id": "vk-digital", "name": "VK Digital", "kind": "cable"},
+  {"id": "act-digital", "name": "ACT Digital", "kind": "cable"},
+  {"id": "siti", "name": "SITI", "kind": "cable"},
+  {"id": "acn-cable", "name": "ACN Cable", "kind": "cable"},
+  {"id": "hathway", "name": "Hathway", "kind": "cable"},
+  {"id": "gtpl-hathway", "name": "GTPL Hathway", "kind": "cable"},
+  {"id": "den", "name": "DEN", "kind": "cable"},
+  {"id": "asianet-digital", "name": "Asianet Digital", "kind": "cable"},
+  {"id": "kccl", "name": "KCCL", "kind": "cable"},
+  {"id": "fastway", "name": "Fastway", "kind": "cable"}
+]

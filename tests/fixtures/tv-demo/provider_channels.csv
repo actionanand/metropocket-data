@@ -1,0 +1,3 @@
+provider_id,channel_id,number,country,state,city,area,revision,verified_at,source_url
+tata-play,demo-news,101,India,,,,r1,2026-01-01,https://example.test/tata
+act-digital,demo-tamil,202,India,Tamil Nadu,Chennai,,r1,2026-01-01,https://example.test/act

@@ -1,0 +1,12 @@
+{
+  "id": "metro-demo",
+  "type": "metro",
+  "name": "Demo Metro",
+  "version": 1,
+  "schemaVersion": 1,
+  "city": "Demo City",
+  "networkAsOf": "2026-01-01",
+  "defaultEdgeMinutes": 3,
+  "description": "Synthetic fixture only.",
+  "changes": ["Initial synthetic fixture"]
+}
