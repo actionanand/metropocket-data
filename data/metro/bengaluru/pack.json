@@ -1,0 +1,12 @@
+{
+  "id": "metro-bengaluru",
+  "type": "metro",
+  "name": "Bengaluru Metro",
+  "version": 1,
+  "schemaVersion": 1,
+  "city": "Bengaluru",
+  "networkAsOf": "2026-10-12",
+  "defaultEdgeMinutes": 3,
+  "description": "Operational metro network snapshot.",
+  "changes": []
+}

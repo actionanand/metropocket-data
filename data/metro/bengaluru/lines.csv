@@ -1,0 +1,4 @@
+id,name,short_name,color,status,terminal_a_station_id,terminal_b_station_id
+purple,Purple Line,Purple,#6A1B9A,operational,whitefield-kadugodi,challaghatta
+green,Green Line,Green,#00843D,operational,madavara,silk-institute
+yellow,Yellow Line,Yellow,#F9C80E,operational,rv-road,delta-electronics-bommasandra
