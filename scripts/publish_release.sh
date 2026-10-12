@@ -64,7 +64,7 @@ verify_release() {
   local tmp_dir
 
   tmp_dir="$(mktemp -d)"
-  trap 'rm -rf "$tmp_dir"' EXIT
+  trap "rm -rf -- '$tmp_dir'" EXIT
 
   echo "==> Checking GitHub release"
 
