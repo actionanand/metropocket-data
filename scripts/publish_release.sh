@@ -111,17 +111,94 @@ PY
   echo "✓ Manifest JSON valid"
   echo "✓ releaseVersion=$RELEASE_VERSION"
 
+  LATEST_TAG="$(
+    gh release view \
+      --repo "$REPO" \
+      --json tagName \
+      --jq '.tagName'
+  )"
+
+  EXPECTED_CLIENT_MANIFEST="$MANIFEST"
+  if [[ "$verify_tag" == "v1" ]]; then
+    EXPECTED_CLIENT_MANIFEST="$tmp_dir/$verify_tag-expected-browser-manifest.json"
+    python scripts/client_mirror.py "$MANIFEST" "$EXPECTED_CLIENT_MANIFEST" \
+      --repository "$REPO" --tag "$verify_tag" --allow-legacy-v1-urls
+  fi
+
+  echo
+  if [[ "$LATEST_TAG" == "$verify_tag" ]]; then
+    echo "==> Downloading latest client-data root manifest"
+    CLIENT_MANIFEST="$tmp_dir/client-manifest.json"
+    curl -4 -fsSL \
+      --connect-timeout 15 \
+      --max-time 60 \
+      "https://raw.githubusercontent.com/$REPO/client-data/manifest.json" \
+      -o "$CLIENT_MANIFEST"
+    python -m json.tool "$CLIENT_MANIFEST" >/dev/null
+    if ! cmp -s "$EXPECTED_CLIENT_MANIFEST" "$CLIENT_MANIFEST"; then
+      echo "ERROR: latest client-data root manifest differs from release manifest"
+      exit 1
+    fi
+    echo "✓ latest client-data root manifest matches release manifest"
+  else
+    echo "==> Verifying historical $verify_tag assets; latest/root manifest verification skipped"
+    CLIENT_MANIFEST="$EXPECTED_CLIENT_MANIFEST"
+  fi
+
+  python - "$CLIENT_MANIFEST" "$MANIFEST" "$verify_tag" "$REPO" <<'PY'
+import json
+import sys
+
+client_path, release_path, tag, repository = sys.argv[1:]
+prefix = f"https://raw.githubusercontent.com/{repository}/client-data/{tag}/"
+with open(client_path, encoding="utf-8") as handle:
+    client = json.load(handle)
+with open(release_path, encoding="utf-8") as handle:
+    release = json.load(handle)
+if client.get("releaseVersion") != int(tag[1:]):
+    raise SystemExit("ERROR: client-data releaseVersion does not match tag")
+release_packs = {pack["file"]: pack["sha256"] for pack in release.get("packs", [])}
+for pack in client.get("packs", []):
+    url = pack.get("downloadUrl", "")
+    expected = f"{prefix}{pack.get('file', '')}"
+    if not isinstance(url, str) or url != expected:
+        raise SystemExit(f"ERROR: browser downloadUrl must equal {expected}: {url!r}")
+    if not url.startswith("https://"):
+        raise SystemExit(f"ERROR: browser downloadUrl must use HTTPS: {url!r}")
+    if release_packs.get(pack.get("file")) != pack.get("sha256"):
+        raise SystemExit(f"ERROR: client-data pack does not match release archive: {pack.get('file')!r}")
+PY
+
+  echo "✓ client-data manifest URLs are HTTPS raw client-data URLs"
+  echo "✓ client-data pack checksums match the GitHub Release archive"
+
   echo
   echo "==> Verifying all data packs"
 
   while IFS=$'\t' read -r FILE SHA URL; do
     [[ -z "$FILE" ]] && continue
 
-    OUTPUT="$tmp_dir/$FILE"
+    RELEASE_OUTPUT="$tmp_dir/release-$FILE"
+    OUTPUT="$tmp_dir/client-$FILE"
 
     echo
     echo "Pack: $FILE"
-    echo "URL : $URL"
+    echo "Client URL : $URL"
+
+    gh release download "$verify_tag" \
+      --repo "$REPO" \
+      --pattern "$FILE" \
+      --dir "$tmp_dir" \
+      --clobber
+
+    mv "$tmp_dir/$FILE" "$RELEASE_OUTPUT"
+    gzip -t "$RELEASE_OUTPUT"
+    RELEASE_SHA="$(sha256sum "$RELEASE_OUTPUT" | awk '{print $1}')"
+    if [[ "$RELEASE_SHA" != "$SHA" ]]; then
+      echo "ERROR: release asset checksum mismatch for $FILE"
+      exit 1
+    fi
+    echo "✓ GitHub Release asset checksum verified"
 
     curl -4 -fL \
       --connect-timeout 15 \
@@ -140,14 +217,14 @@ PY
       exit 1
     fi
 
-    echo "✓ gzip valid"
-    echo "✓ checksum verified"
+    echo "✓ client-data gzip valid"
+    echo "✓ client-data checksum verified"
 
     if [[ -f scripts/inspect_pack.py ]]; then
       python scripts/inspect_pack.py "$OUTPUT"
     fi
   done < <(
-    python - "$MANIFEST" <<'PY'
+    python - "$CLIENT_MANIFEST" <<'PY'
 import json
 import sys
 
@@ -163,13 +240,6 @@ for pack in manifest["packs"]:
     )
 PY
   )
-
-  LATEST_TAG="$(
-    gh release view \
-      --repo "$REPO" \
-      --json tagName \
-      --jq '.tagName'
-  )"
 
   if [[ "$LATEST_TAG" == "$verify_tag" ]]; then
     echo

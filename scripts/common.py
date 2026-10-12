@@ -169,10 +169,11 @@ def utc_now_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
 
-def release_url(repository: str, tag: str, filename: str) -> str:
+def client_data_url(repository: str, tag: str, filename: str) -> str:
     repository = require_string(repository, "repository")
     tag = require_string(tag, "tag")
-    return f"https://github.com/{repository}/releases/download/{tag}/{filename}"
+    filename = require_string(filename, "filename")
+    return f"https://raw.githubusercontent.com/{repository}/client-data/{tag}/{filename}"
 
 
 def pack_descriptor(
@@ -189,7 +190,7 @@ def pack_descriptor(
         "version": meta["version"],
         "schemaVersion": meta["schemaVersion"],
         "file": gz_path.name,
-        "downloadUrl": release_url(repository, tag, gz_path.name),
+        "downloadUrl": client_data_url(repository, tag, gz_path.name),
         "downloadBytes": gz_path.stat().st_size,
         "installedBytes": db_path.stat().st_size,
         "sha256": sha256(gz_path),

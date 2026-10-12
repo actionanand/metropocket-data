@@ -4,9 +4,11 @@
 
 Client repository: `https://github.com/actionanand/metro-pocket`
 
-The MetroPocket client expects the latest manifest at:
+GitHub Releases are the canonical, versioned archive for CLI/manual downloads.
+The MetroPocket browser/PWA and Capacitor runtime use the CORS-safe raw mirror
+at:
 
-`https://github.com/actionanand/metropocket-data/releases/latest/download/manifest.json`
+`https://raw.githubusercontent.com/actionanand/metropocket-data/client-data/manifest.json`
 
 This repository intentionally contains **no fabricated production station, route, travel-time, or TV channel-number data**. Production data is maintained as source CSV/JSON files, validated, converted into SQLite databases, compressed as deterministic `.db.gz` packs, and published as GitHub Release assets.
 
@@ -37,7 +39,7 @@ The manifest is generated from the built packs and includes the fields required 
       "version": 1,
       "schemaVersion": 1,
       "file": "metro-bengaluru.db.gz",
-      "downloadUrl": "https://github.com/actionanand/metropocket-data/releases/download/v1/metro-bengaluru.db.gz",
+      "downloadUrl": "https://raw.githubusercontent.com/actionanand/metropocket-data/client-data/v1/metro-bengaluru.db.gz",
       "downloadBytes": 12345,
       "installedBytes": 45678,
       "sha256": "...",
@@ -108,7 +110,10 @@ Before every release:
 5. Run validation and tests.
 6. Publish the release workflow.
 
-The MetroPocket client downloads `releases/latest/download/manifest.json`, so the newest stable GitHub Release becomes the active manifest.
+The release workflow uploads `manifest.json` and `.db.gz` files to the GitHub
+Release, then mirrors only the `.db.gz` files under `client-data/<tag>/` and
+updates `client-data/manifest.json`. Pack URLs in that manifest are immutable
+and tag-specific.
 
 ## Repository layout
 

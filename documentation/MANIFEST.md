@@ -8,10 +8,21 @@
 
 `sha256` is calculated over the compressed `.db.gz` file because those are the exact bytes downloaded and verified by the MetroPocket client.
 
-`downloadUrl` is generated as:
+`downloadUrl` is generated as an immutable browser endpoint:
 
 ```text
-https://github.com/<repository>/releases/download/<tag>/<filename>
+https://raw.githubusercontent.com/<repository>/client-data/<tag>/<filename>
 ```
 
-The repository's stable latest release must contain `manifest.json`, because the client uses GitHub's `releases/latest/download/manifest.json` redirect.
+The same manifest is uploaded to the GitHub Release archive and published as
+`client-data/manifest.json`. GitHub Release assets remain the canonical
+versioned archive; the `client-data` copy exists solely for browser/Capacitor
+runtime downloads.
+
+The root `client-data/manifest.json` always describes the newest browser
+release. Historical pack downloads remain available at their tag-specific URLs
+even after this root manifest advances.
+
+Publishing an older tag never moves the root backward. A collision with a
+different byte sequence in an already-published `client-data/<tag>/` file is a
+failure, not an overwrite.

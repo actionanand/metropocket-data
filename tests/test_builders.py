@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import gzip
+import hashlib
 import json
 import sqlite3
 import sys
@@ -14,6 +15,12 @@ sys.path.insert(0, str(ROOT))
 from scripts.build_all import build_all
 from scripts.build_metro import build_pack as build_metro, validate_source as validate_metro
 from scripts.build_tv import build_pack as build_tv, validate_source as validate_tv
+from scripts.client_mirror import (
+    browser_manifest_for_tag,
+    publish_mirror,
+    root_manifest_action,
+    root_manifest_applies_to_tag,
+)
 from scripts.common import DataError
 
 
@@ -82,10 +89,74 @@ class BuilderTests(unittest.TestCase):
             self.assertEqual(manifest["releaseVersion"], 7)
             self.assertEqual({p["type"] for p in manifest["packs"]}, {"metro", "tv"})
             for pack in manifest["packs"]:
-                self.assertTrue(pack["downloadUrl"].startswith("https://github.com/actionanand/metropocket-data/releases/download/v-test/"))
+                self.assertEqual(
+                    pack["downloadUrl"],
+                    f"https://raw.githubusercontent.com/actionanand/metropocket-data/client-data/v-test/{pack['file']}",
+                )
                 self.assertGreater(pack["downloadBytes"], 0)
                 self.assertGreater(pack["installedBytes"], 0)
                 self.assertEqual(len(pack["sha256"]), 64)
+
+    def test_browser_manifest_rewrites_only_legacy_v1_release_urls(self):
+        release = {
+            "releaseVersion": 1,
+            "packs": [{
+                "file": "metro-bengaluru.db.gz",
+                "downloadUrl": "https://github.com/actionanand/metropocket-data/releases/download/v1/metro-bengaluru.db.gz",
+            }],
+        }
+        browser = browser_manifest_for_tag(
+            release, "actionanand/metropocket-data", "v1", allow_legacy_v1_urls=True
+        )
+        self.assertEqual(
+            browser["packs"][0]["downloadUrl"],
+            "https://raw.githubusercontent.com/actionanand/metropocket-data/client-data/v1/metro-bengaluru.db.gz",
+        )
+        self.assertNotEqual(browser, release)
+        with self.assertRaises(DataError):
+            browser_manifest_for_tag(release, "actionanand/metropocket-data", "v2")
+
+    def test_root_manifest_only_applies_to_its_latest_release_tag(self):
+        root = {"releaseVersion": 2}
+        self.assertTrue(root_manifest_applies_to_tag(root, "v2"))
+        self.assertFalse(root_manifest_applies_to_tag(root, "v1"))
+
+    def test_root_manifest_is_monotonic_and_rejects_same_version_conflicts(self):
+        v1 = {"releaseVersion": 1, "packs": []}
+        v2 = {"releaseVersion": 2, "packs": []}
+        self.assertEqual(root_manifest_action(None, v1), "create")
+        self.assertEqual(root_manifest_action(v1, v1), "unchanged")
+        self.assertEqual(root_manifest_action(v1, v2), "update")
+        self.assertEqual(root_manifest_action(v2, v1), "preserve-newer")
+        with self.assertRaises(DataError):
+            root_manifest_action(v1, {"releaseVersion": 1, "packs": [{"id": "conflict"}]})
+
+    def test_publish_mirror_preserves_root_and_rejects_asset_collision(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            base = Path(tmp)
+            assets = base / "assets"
+            worktree = base / "worktree"
+            assets.mkdir()
+            worktree.mkdir()
+            filename = "metro-bengaluru.db.gz"
+            asset = assets / filename
+            asset.write_bytes(b"first bytes")
+            digest = hashlib.sha256(asset.read_bytes()).hexdigest()
+            manifest = {
+                "releaseVersion": 1,
+                "packs": [{"file": filename, "sha256": digest,
+                           "downloadUrl": "https://raw.githubusercontent.com/actionanand/metropocket-data/client-data/v1/metro-bengaluru.db.gz"}],
+            }
+            _, action, copied = publish_mirror(worktree, assets, manifest, "actionanand/metropocket-data", "v1")
+            self.assertEqual((action, copied), ("create", [filename]))
+            _, action, copied = publish_mirror(worktree, assets, manifest, "actionanand/metropocket-data", "v1")
+            self.assertEqual((action, copied), ("unchanged", []))
+            (worktree / "manifest.json").write_text('{"releaseVersion": 2, "packs": []}', encoding="utf-8")
+            _, action, _ = publish_mirror(worktree, assets, manifest, "actionanand/metropocket-data", "v1")
+            self.assertEqual(action, "preserve-newer")
+            (worktree / "v1" / filename).write_bytes(b"different bytes")
+            with self.assertRaises(DataError):
+                publish_mirror(worktree, assets, manifest, "actionanand/metropocket-data", "v1")
 
     def test_invalid_metro_reference_is_rejected(self):
         with tempfile.TemporaryDirectory() as tmp:

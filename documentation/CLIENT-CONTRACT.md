@@ -4,10 +4,10 @@ This repository is aligned to the current MetroPocket client contract.
 
 ## Manifest
 
-The client fetches:
+The browser/Capacitor client fetches:
 
 ```text
-https://github.com/actionanand/metropocket-data/releases/latest/download/manifest.json
+https://raw.githubusercontent.com/actionanand/metropocket-data/client-data/manifest.json
 ```
 
 Top-level fields:
@@ -25,7 +25,7 @@ Pack fields required by the client validator:
 - `version`: positive integer
 - `schemaVersion`: exactly `1`
 - `file`: non-empty string
-- `downloadUrl`: valid HTTPS URL
+- `downloadUrl`: valid HTTPS URL under `raw.githubusercontent.com/actionanand/metropocket-data/client-data/<tag>/`
 
 Optional fields supported by the client:
 
