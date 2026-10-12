@@ -136,7 +136,7 @@ jobs:
               while IFS= read -r asset; do
                 curl -fsSL "https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/client-data/${RELEASE_TAG}/${asset}" \
                   -o "/tmp/${asset}" || { MIRROR_OK=0; break; }
-                [[ "$(sha256sum "$asset" | awk '{print $1}')" == "$(sha256sum "/tmp/${asset}" | awk '{print $1}')" ]] || {
+                [[ "$(sha256sum "$RELEASE_TAG/$asset" | awk '{print $1}')" == "$(sha256sum "/tmp/${asset}" | awk '{print $1}')" ]] || {
                   MIRROR_OK=0; break;
                 }
               done < <(find "$RELEASE_TAG" -maxdepth 1 -type f -name '*.db.gz' -printf '%f\n')
