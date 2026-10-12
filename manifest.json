@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "releaseVersion": 1,
-  "generatedAt": "2026-10-12T08:59:43Z",
+  "releaseVersion": 2,
+  "generatedAt": "2026-10-12T18:08:57Z",
   "packs": [
     {
       "id": "metro-bengaluru",
@@ -10,13 +10,30 @@
       "version": 1,
       "schemaVersion": 1,
       "file": "metro-bengaluru.db.gz",
-      "downloadUrl": "https://raw.githubusercontent.com/actionanand/metropocket-data/client-data/v1/metro-bengaluru.db.gz",
+      "downloadUrl": "https://raw.githubusercontent.com/actionanand/metropocket-data/client-data/v2/metro-bengaluru.db.gz",
       "downloadBytes": 11102,
       "installedBytes": 114688,
       "sha256": "109435af8d0cf43ffba539914cbf89faea30a23b58ebe4b81b0ec1c3528cd91c",
       "city": "Bengaluru",
       "networkAsOf": "2026-10-12",
       "description": "Operational metro network snapshot."
+    },
+    {
+      "id": "tv-channels",
+      "type": "tv",
+      "name": "India TV Channels",
+      "version": 1,
+      "schemaVersion": 1,
+      "file": "tv-channels.db.gz",
+      "downloadUrl": "https://raw.githubusercontent.com/actionanand/metropocket-data/client-data/v2/tv-channels.db.gz",
+      "downloadBytes": 122587,
+      "installedBytes": 540672,
+      "sha256": "8cf2eadf431c77beb9801c312c07f47dfa5eef7201b4e0628083af8f1f1b6155",
+      "description": "Offline India TV channel-number catalogue with JioTV+ and Airtel Digital TV provider metadata, language/genre metadata and native-name aliases.",
+      "changes": [
+        "Adds JioTV+ as an IPTV provider with 72 highest-precedence subscriber-observed mappings and a dated secondary catalogue.",
+        "Adds Airtel Digital TV mappings from dated official aggregate and dedicated catalogue snapshots; unresolved official number conflicts are excluded."
+      ]
     }
   ]
 }
