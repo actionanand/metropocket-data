@@ -1,0 +1,11 @@
+number,name,language,genre,quality,source_url,source_scope,verified_at
+563,PTC NEWS,Punjabi,News,SD,https://www.airtel.in/plans/dth/all-channel-list,aggregate,2026-10-12
+563,ABP Sanjha,Punjabi,News,SD,https://www.airtel.in/plans/dth/all-channel-list,aggregate,2026-10-12
+563,PTC NEWS,Punjabi,News,SD,https://www.airtel.in/plans/dth/punjabi-channels,language:Punjabi,2026-10-12
+564,ABP Sanjha,Punjabi,News,SD,https://www.airtel.in/plans/dth/news-channels,genre:News,2026-10-12
+700,Duplicate TV,English,Entertainment,HD,https://www.airtel.in/plans/dth/all-channel-list,aggregate,2026-10-12
+700,Duplicate TV,English,Entertainment,HD,https://www.airtel.in/plans/dth/english-channels,language:English,2026-10-12
+701,Aggregate One,English,News,SD,https://www.airtel.in/plans/dth/all-channel-list,aggregate,2026-10-12
+701,Aggregate Two,English,News,SD,https://www.airtel.in/plans/dth/all-channel-list,aggregate,2026-10-12
+702,Dedicated One,English,News,SD,https://www.airtel.in/plans/dth/english-channels,language:English,2026-10-12
+702,Dedicated Two,English,News,SD,https://www.airtel.in/plans/dth/news-channels,genre:News,2026-10-12

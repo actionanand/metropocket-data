@@ -57,8 +57,8 @@ def validate_source(folder: Path) -> dict[str, Any]:
     canonical = {item["id"]: item for item in load_json(ROOT / "config" / "tv-providers.json")}
     for row in providers:
         require_string(row["name"], "provider.name")
-        if row["kind"] not in {"dth", "cable"}:
-            raise DataError("provider.kind must be dth or cable")
+        if row["kind"] not in {"dth", "cable", "iptv"}:
+            raise DataError("provider.kind must be dth, cable or iptv")
         if row["id"] not in canonical:
             raise DataError(f"Unknown provider id {row['id']!r}; update config/tv-providers.json deliberately first")
         if canonical[row["id"]]["kind"] != row["kind"]:
@@ -75,6 +75,7 @@ def validate_source(folder: Path) -> dict[str, Any]:
         require_string(row["alias"], "channel alias")
 
     seen: set[tuple[str, ...]] = set()
+    national_numbers: dict[tuple[str, str], str] = {}
     for row in mappings:
         if row["provider_id"] not in provider_ids:
             raise DataError(f"mapping references unknown provider {row['provider_id']!r}")
@@ -96,6 +97,12 @@ def validate_source(folder: Path) -> dict[str, Any]:
         if key in seen:
             raise DataError(f"Duplicate provider mapping {key}")
         seen.add(key)
+        if row["provider_id"] in {"jiotv-plus", "airtel-digital-tv"}:
+            number_key = (row["provider_id"], row["number"])
+            existing_channel = national_numbers.get(number_key)
+            if existing_channel and existing_channel != row["channel_id"]:
+                raise DataError(f"Conflicting national provider channel number {number_key}")
+            national_numbers[number_key] = row["channel_id"]
 
     return {"meta": meta, "providers": providers, "channels": channels, "aliases": aliases, "mappings": mappings}
 

@@ -1,0 +1,12 @@
+{
+  "id": "tv-channels",
+  "type": "tv",
+  "name": "India TV Channels",
+  "version": 1,
+  "schemaVersion": 1,
+  "description": "Offline India TV channel-number catalogue with JioTV+ and Airtel Digital TV provider metadata, language/genre metadata and native-name aliases.",
+  "changes": [
+    "Adds JioTV+ as an IPTV provider with 72 highest-precedence subscriber-observed mappings and a dated secondary catalogue.",
+    "Adds Airtel Digital TV mappings from dated official aggregate and dedicated catalogue snapshots; unresolved official number conflicts are excluded."
+  ]
+}

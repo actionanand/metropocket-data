@@ -22,9 +22,22 @@ from scripts.client_mirror import (
     root_manifest_applies_to_tag,
 )
 from scripts.common import DataError
+from scripts.import_tv_channels import generate as generate_tv_channels
 
 
 class BuilderTests(unittest.TestCase):
+    def test_jio_subscriber_snapshot_generates_exactly_72_mappings(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            pack = Path(tmp)
+            result = generate_tv_channels(pack, ROOT / "sources" / "tv")
+            self.assertEqual(result["subscriber_observed"], 72)
+            self.assertGreaterEqual(result["jiotv_mappings"], 72)
+            self.assertIn("jiotv-plus,JioTV+,iptv", (pack / "providers.csv").read_text(encoding="utf-8"))
+            mappings = (pack / "provider_channels.csv").read_text(encoding="utf-8")
+            aliases = (pack / "channel_aliases.csv").read_text(encoding="utf-8")
+            self.assertIn("jiotv-plus,sun-news,1559,IN,,,,subscriber-observed-2026-10-12,2026-10-12,", mappings)
+            self.assertIn("sun-news,சன் நியூஸ்", aliases)
+
     def test_metro_fixture_builds_valid_sqlite(self):
         with tempfile.TemporaryDirectory() as tmp:
             out = Path(tmp)

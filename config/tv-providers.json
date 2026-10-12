@@ -1,5 +1,5 @@
 [
-  {"id": "jiotv-plus", "name": "JioTV+", "kind": "dth"},
+  {"id": "jiotv-plus", "name": "JioTV+", "kind": "iptv"},
   {"id": "tata-play", "name": "Tata Play", "kind": "dth"},
   {"id": "airtel-digital-tv", "name": "Airtel Digital TV", "kind": "dth"},
   {"id": "sun-direct", "name": "Sun Direct", "kind": "dth"},

@@ -13,7 +13,9 @@ The TV pack is region-aware because cable LCNs can vary by state, city, area or 
 
 ## Providers
 
-Provider `kind` must be `dth` or `cable`.
+Provider `kind` must be `dth`, `cable`, or `iptv`. JioTV+ is modelled as
+`iptv`; clients must add support for that provider kind before this pack is
+released to them.
 
 Canonical provider identities are listed in `config/tv-providers.json`.
 

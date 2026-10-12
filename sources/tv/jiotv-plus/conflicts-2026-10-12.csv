@@ -1,0 +1,78 @@
+number,external_names,subscriber_name,resolution,reason
+141,Bharat Samachar | Zee TV HD,,excluded,conflicting external names for one provider number
+218,9 Bharat Samachar | Shri Govinddevjji Jaipur,,excluded,conflicting external names for one provider number
+252-255,Utkarsh,,excluded,range without individual identities
+362,ADPOLI | Dil Se,,excluded,conflicting external names for one provider number
+364,DHAMAAL | Dhamal,,excluded,conflicting external names for one provider number
+372-380,e vidya 02-10,,excluded,range without individual identities
+384-402,Swayam Prabha,,excluded,range without individual identities
+426,ABC NEWS | Gangour,,excluded,conflicting external names for one provider number
+446,BHOJPURI JUNCTION | Bhopjpuri Junction,,excluded,conflicting external names for one provider number
+456,Ishvani | Star Sport2,,excluded,conflicting external names for one provider number
+459,Star Maa Movies | Star Sports 1 Hindi,,excluded,conflicting external names for one provider number
+465,DD Telangana | Star sports select 2 HD,,excluded,conflicting external names for one provider number
+501,Captain TV | DD News,,excluded,conflicting external names for one provider number
+511,NDTV India | Zee news,,excluded,conflicting external names for one provider number
+514,India TV | Vasanth TV,,excluded,conflicting external names for one provider number
+520,Captain News | Zee Hindustan,,excluded,conflicting external names for one provider number
+521,Kalaignar Seithigal,Kalaignar Seithigal,subscriber override,subscriber-observed mapping takes precedence
+538,Velukkudi Discourses,Velukkudi Discourse,subscriber override,subscriber-observed mapping takes precedence
+568,Jan Tantra | Kairali News,,excluded,conflicting external names for one provider number
+693,Chutti TV,Chutti TV,subscriber override,subscriber-observed mapping takes precedence
+711,9x Tashan,Nat Geo Wild,subscriber override,subscriber-observed mapping takes precedence
+720,History TV HD,History TV,subscriber override,subscriber-observed mapping takes precedence
+815-829,Vande Gujarat 1-16,,excluded,range without individual identities
+922,SVBC4,Tirupati 4,subscriber override,subscriber-observed mapping takes precedence
+924,Wild Earth,Wild Earth,subscriber override,subscriber-observed mapping takes precedence
+929,SAI TV,Sai TV,subscriber override,subscriber-observed mapping takes precedence
+1039,Tunes 6 Music,Tune 6 Music,subscriber override,subscriber-observed mapping takes precedence
+1066,Jinvani | Peace of mind,,excluded,conflicting external names for one provider number
+1078,NEWS18 Urdu | Vedic,,excluded,conflicting external names for one provider number
+1095,Raj News 24*7,Raj News,subscriber override,subscriber-observed mapping takes precedence
+1121,M NADU,M Nadu,subscriber override,subscriber-observed mapping takes precedence
+1126,Krish Pitara | Zee uttarpradesh Uttarkahnd,,excluded,conflicting external names for one provider number
+1158-1167,e -vidya,,excluded,range without individual identities
+1186,Malai Murasu,Malai Murasu,subscriber override,subscriber-observed mapping takes precedence
+1191,Puthuyugam,Pudhuyugam,subscriber override,subscriber-observed mapping takes precedence
+1334,Disha Bhakti | Zee News Kannada,,excluded,conflicting external names for one provider number
+1343,MK music,MK Music,subscriber override,subscriber-observed mapping takes precedence
+1345,MK TV,MK TV,subscriber override,subscriber-observed mapping takes precedence
+1353,B4U Bhojpuri | B4U Bhojuri,,excluded,conflicting external names for one provider number
+1402,MOON TV,Moon TV,subscriber override,subscriber-observed mapping takes precedence
+1403,SAMAY BIHAR JHARKHAND | Zee Telugu,,excluded,conflicting external names for one provider number
+1405,Gemini HD | SAHARA SAMAY RASHTRIYA,,excluded,conflicting external names for one provider number
+1422,AALAMI SAHARA | Vissa,,excluded,conflicting external names for one provider number
+1471,Prime 9 news | Samachar 24 HD,,excluded,conflicting external names for one provider number
+1472,BIG TV | Vande Bharat News,,excluded,conflicting external names for one provider number
+1481,DD saptagiri | GREENS INTERNAL | Greens INTERNAL,,excluded,conflicting external names for one provider number
+1485,Adhyatam TV | Gemini Music HD,,excluded,conflicting external names for one provider number
+1503,Sun TV,Sun TV,subscriber override,subscriber-observed mapping takes precedence
+1506,Sun Life,Sun Life,subscriber override,subscriber-observed mapping takes precedence
+1507,STAR Vijay,Star Vijay,subscriber override,subscriber-observed mapping takes precedence
+1511,Zee Tamil,Zee Tamil,subscriber override,subscriber-observed mapping takes precedence
+1514,Colors Tamil,Colors Tamil,subscriber override,subscriber-observed mapping takes precedence
+1518,Kalaignar TV,Kalaignar TV,subscriber override,subscriber-observed mapping takes precedence
+1520,Raj TV,Raj TV,subscriber override,subscriber-observed mapping takes precedence
+1522,Raj Digital Plus,Raj Digital Plus,subscriber override,subscriber-observed mapping takes precedence
+1530,VASANTH TV,Vasanth TV,subscriber override,subscriber-observed mapping takes precedence
+1532,Polimer,Polimer TV,subscriber override,subscriber-observed mapping takes precedence
+1533,Makkal TV,Makkal TV,subscriber override,subscriber-observed mapping takes precedence
+1534,Peppers,Peppers TV,subscriber override,subscriber-observed mapping takes precedence
+1536,VANAVIL TV,Vendhar,subscriber override,subscriber-observed mapping takes precedence
+1540,KTV HD,KTV,subscriber override,subscriber-observed mapping takes precedence
+1543,Adithya TV,Adithya TV,subscriber override,subscriber-observed mapping takes precedence
+1546,Zee Thirai,Zee Thirai,subscriber override,subscriber-observed mapping takes precedence
+1553,TRAVEL XP Tamil,Travel XP Tamil,subscriber override,subscriber-observed mapping takes precedence
+1556,Puthiya thalaimurai,Puthiya Thalaimurai,subscriber override,subscriber-observed mapping takes precedence
+1557,Thanthi TV,Thanthi TV,subscriber override,subscriber-observed mapping takes precedence
+1559,Sun News,Sun News,subscriber override,subscriber-observed mapping takes precedence
+1561,Polimer News,Polimer News,subscriber override,subscriber-observed mapping takes precedence
+1562,News 18 Tamilnadu,News18 Tamil Nadu,subscriber override,subscriber-observed mapping takes precedence
+1565,Sathiyam TV,Sathiyam TV,subscriber override,subscriber-observed mapping takes precedence
+1568,News J,News J,subscriber override,subscriber-observed mapping takes precedence
+1569,NEWS tamil 24X7,News Tamil 24x7,subscriber override,subscriber-observed mapping takes precedence
+1578,DD Podhigai,DD Tamil,subscriber override,subscriber-observed mapping takes precedence
+1579,Sun Music HD,Sun Music,subscriber override,subscriber-observed mapping takes precedence
+1582,Raj Musix,Raj Music,subscriber override,subscriber-observed mapping takes precedence
+1587,JOTHI TV,Jyothi,subscriber override,subscriber-observed mapping takes precedence
+1698,SVBC 2 | SVBC 3,Tirupati,subscriber override,subscriber-observed mapping takes precedence

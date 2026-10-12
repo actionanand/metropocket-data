@@ -1,0 +1,9 @@
+number,aggregate_names,dedicated_names,chosen_name,chosen_source_url,resolution,reason
+324,,Times Now Navbharat HD | Times Now Navbharat HD (Rs. 1.77),,,excluded,official sources do not resolve one channel for this provider number
+539,TV9 Marathi,TV9 Maharashtra,TV9 Maharashtra,https://www.airtel.in/plans/dth/marathi-channels,dedicated official page selected,aggregate mapping conflicts; dedicated official evidence is unambiguous
+556,Zee Punjabi,Zee Punjabi @ Rs 3,Zee Punjabi @ Rs 3,https://www.airtel.in/plans/dth/punjabi-channels,dedicated official page selected,aggregate mapping conflicts; dedicated official evidence is unambiguous
+563,ABP Sanjha | PTC NEWS,PTC NEWS,PTC NEWS,https://www.airtel.in/plans/dth/news-channels,dedicated official page selected,aggregate mapping conflicts; dedicated official evidence is unambiguous
+583,TV9 Gujarati,TV9 GUJRATI,TV9 GUJRATI,https://www.airtel.in/plans/dth/gujarati-channels,dedicated official page selected,aggregate mapping conflicts; dedicated official evidence is unambiguous
+622,FRANCE 24 @ FREE | Zee Salaam,,,,excluded,official sources do not resolve one channel for this provider number
+663,Zee Biskope,Zee Biskope | Zee Biskope @ Rs 0.1,,,excluded,official sources do not resolve one channel for this provider number
+724,ABP ANANDA | News18 Bangla,ABP ANANDA | News18 Bangla,,,excluded,official sources do not resolve one channel for this provider number
