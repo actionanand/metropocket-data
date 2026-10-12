@@ -41,18 +41,18 @@ jobs:
             if printf '%s\n' "$RELEASE_ASSETS" | grep -Fxq 'manifest.json'; then
               gh release download "$RELEASE_TAG" --pattern 'manifest.json' --dir existing-release --clobber
               python - dist/manifest.json existing-release/manifest.json <<'PY'
-import json
-import sys
+          import json
+          import sys
 
-with open(sys.argv[1], encoding="utf-8") as handle:
-    candidate = json.load(handle)
-with open(sys.argv[2], encoding="utf-8") as handle:
-    published = json.load(handle)
-candidate.pop("generatedAt", None)
-published.pop("generatedAt", None)
-if candidate != published:
-    raise SystemExit("ERROR: existing release manifest differs from this build")
-PY
+          with open(sys.argv[1], encoding="utf-8") as handle:
+              candidate = json.load(handle)
+          with open(sys.argv[2], encoding="utf-8") as handle:
+              published = json.load(handle)
+          candidate.pop("generatedAt", None)
+          published.pop("generatedAt", None)
+          if candidate != published:
+              raise SystemExit("ERROR: existing release manifest differs from this build")
+          PY
               cp existing-release/manifest.json dist/manifest.json
             else
               gh release upload "$RELEASE_TAG" dist/manifest.json
