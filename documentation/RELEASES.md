@@ -39,6 +39,13 @@ python -m unittest discover -s tests -v
 
 Do not replace a published pack file under the same release/version. Publish a new pack version and a new release.
 
+## TV-pack release boundary
+
+The existing data release `v1` and its `client-data/v1/` mirror are immutable.
+The initial combined Metro + TV publication must be data release `v2`; do not
+add `tv-channels` to the historical v1 release or bootstrap it into the v1
+client-data directory.
+
 ## Bootstrap the existing v1 release
 
 This is needed only for the pre-mirror v1 release. It can be rerun safely and
