@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "releaseVersion": 1,
+  "generatedAt": "2026-10-12T08:59:43Z",
+  "packs": [
+    {
+      "id": "metro-bengaluru",
+      "type": "metro",
+      "name": "Bengaluru Metro",
+      "version": 1,
+      "schemaVersion": 1,
+      "file": "metro-bengaluru.db.gz",
+      "downloadUrl": "https://raw.githubusercontent.com/actionanand/metropocket-data/client-data/v1/metro-bengaluru.db.gz",
+      "downloadBytes": 11102,
+      "installedBytes": 114688,
+      "sha256": "109435af8d0cf43ffba539914cbf89faea30a23b58ebe4b81b0ec1c3528cd91c",
+      "city": "Bengaluru",
+      "networkAsOf": "2026-10-12",
+      "description": "Operational metro network snapshot."
+    }
+  ]
+}
