@@ -1,0 +1,16 @@
+train_number,train_name,running_days,stop_sequence,station_code,station_name,arrival_time,departure_time,day_offset
+17235,Nagercoil Express,,1,SMVB,SMVT Bengaluru,,17:15,0
+,,,2,HSRA,Hosur,18:06,18:08,0
+,,,3,DPJ,Dharmapuri,19:48,19:50,0
+,,,4,SA,Salem Jn,21:55,22:05,0
+,,,5,RASP,Rasipuram,22:34,22:35,0
+,,,6,NMKL,Namakkal,22:59,23:00,0
+,,,7,KRR,Karur,23:38,23:40,0
+,,,8,DG,Dindigul Jn,01:17,01:20,1
+,,,9,MDU,Madurai Jn,02:15,02:20,1
+,,,10,VPT,Virudunagar Jn,02:53,02:55,1
+,,,11,SRT,Satur,03:13,03:15,1
+,,,12,CVP,Kovilpatti,03:33,03:35,1
+,,,13,TEN,Tirunelveli,05:10,05:15,1
+,,,14,VLY,Valliyur,05:53,05:55,1
+,,,15,NCJ,Nagercoil Jn,07:20,,1

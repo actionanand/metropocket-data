@@ -1,0 +1,14 @@
+train_number,train_name,running_days,stop_sequence,station_code,station_name,arrival_time,departure_time,day_offset
+22668,CBE NCJ SF Express,,1,CBE,Coimbatore Jn,,19:30,0
+,,,2,TUP,Tiruppur,20:08,20:10,0
+,,,3,ED,Erode Jn,20:50,20:55,0
+,,,4,KRR,Karur,21:58,22:00,0
+,,,5,DG,Dindigul Jn,23:12,23:15,0
+,,,6,MDU,Madurai Jn,00:25,00:30,1
+,,,7,VPT,Virudunagar Jn,01:08,01:10,1
+,,,8,SRT,Satur,01:26,01:28,1
+,,,9,CVP,Kovilpatti,01:38,01:40,1
+,,,10,MEJ,Vanchimaniyachi,02:08,02:10,1
+,,,11,TEN,Tirunelveli,02:55,03:00,1
+,,,12,VLY,Valliyur,03:28,03:30,1
+,,,13,NCJ,Nagercoil Jn,04:40,,1

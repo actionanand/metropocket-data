@@ -1,0 +1,16 @@
+train_number,train_name,running_days,stop_sequence,station_code,station_name,arrival_time,departure_time,day_offset
+17236,NCJ SMVB Express,,1,NCJ,Nagercoil Jn,,19:15,0
+,,,2,VLY,Valliyur,19:49,19:50,0
+,,,3,TEN,Tirunelveli,21:15,21:20,0
+,,,4,CVP,Kovilpatti,22:13,22:15,0
+,,,5,SRT,Satur,22:32,22:34,0
+,,,6,VPT,Virudunagar Jn,23:03,23:05,0
+,,,7,MDU,Madurai Jn,23:50,23:55,0
+,,,8,DG,Dindigul Jn,01:10,01:15,1
+,,,9,KRR,Karur,02:18,02:20,1
+,,,10,NMKL,Namakkal,02:49,02:50,1
+,,,11,RASP,Rasipuram,03:09,03:10,1
+,,,12,SA,Salem Jn,03:50,03:55,1
+,,,13,DPJ,Dharmapuri,05:18,05:20,1
+,,,14,HSRA,Hosur,07:08,07:10,1
+,,,15,SMVB,SMVT Bengaluru,09:30,,1

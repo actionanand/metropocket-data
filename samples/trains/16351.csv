@@ -1,0 +1,45 @@
+train_number,train_name,running_days,stop_sequence,station_code,station_name,arrival_time,departure_time,day_offset
+16351,Nagarcoil Express,MON|FRI,1,LTT,Lokmanyatilak T,,20:55,0
+,,,2,TNA,Thane,21:07,21:10,0
+,,,3,KYN,Kalyan Jn,21:27,21:30,0
+,,,4,KJT,Karjat,22:28,22:30,0
+,,,5,LNL,Lonavala,23:13,23:15,0
+,,,6,PUNE,Pune Jn,00:15,00:20,1
+,,,7,DD,Daund Jn,01:30,01:35,1
+,,,8,KWV,Kurduvadi,02:48,02:50,1
+,,,9,SUR,Solapur Jn,03:45,03:50,1
+,,,10,KLBG,Kalaburagi,05:37,05:40,1
+,,,11,SDB,Shahabad,06:03,06:05,1
+,,,12,WADI,Wadi,06:43,06:45,1
+,,,13,YG,Yadgir,07:13,07:15,1
+,,,14,RC,Raichur,08:18,08:20,1
+,,,15,MALM,Manthralayam Rd,08:48,08:50,1
+,,,16,AD,Adoni,09:18,09:20,1
+,,,17,GTL,Guntakal Jn,10:20,10:30,1
+,,,18,GY,Gooty,10:58,11:00,1
+,,,19,TU,Tadipatri,11:43,11:45,1
+,,,20,YA,Yerraguntla,12:33,12:35,1
+,,,21,HX,Cuddapah,13:03,13:05,1
+,,,22,RJP,Razampeta,13:48,13:50,1
+,,,23,KOU,Koduru,14:19,14:20,1
+,,,24,RU,Renigunta Jn,15:15,15:25,1
+,,,25,TRT,Tiruttani,16:28,16:30,1
+,,,26,AJJ,Arakkonam Jn,17:20,18:00,1
+,,,27,CJ,Kanchipuram,18:33,18:35,1
+,,,28,CGL,Chengalpattu,19:30,19:35,1
+,,,29,MLMR,Melmaruvattur,19:58,20:00,1
+,,,30,TMV,Tindivanam,20:23,20:25,1
+,,,31,VM,Villupuram Jn,21:30,21:35,1
+,,,32,VRI,Vridhachalam Jn,22:16,22:18,1
+,,,33,ALU,Ariyalur,22:51,22:52,1
+,,,34,SRGM,Srirangam,23:38,23:40,1
+,,,35,TPJ,Tiruchchirappalli,00:25,00:30,2
+,,,36,DG,Dindigul Jn,01:32,01:35,2
+,,,37,MDU,Madurai Jn,02:30,02:35,2
+,,,38,VPT,Virudunagar Jn,03:08,03:10,2
+,,,39,SRT,Satur,03:28,03:30,2
+,,,40,CVP,Kovilpatti,03:48,03:50,2
+,,,41,TEN,Tirunelveli,04:55,05:00,2
+,,,42,NNN,Nanguneri,05:27,05:28,2
+,,,43,VLY,Valliyur,05:39,05:40,2
+,,,44,NCJ,Nagercoil Jn,07:00,,2
