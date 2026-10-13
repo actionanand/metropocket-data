@@ -1,0 +1,58 @@
+train_number,train_name,running_days,stop_sequence,station_code,station_name,arrival_time,departure_time,day_offset
+16381,Kanyakumari Express,,1,PUNE,Pune Jn,,23:20,0
+,,,2,DD,Daund Jn,00:20,00:25,1
+,,,3,KWV,Kurduvadi,02:03,02:05,1
+,,,4,SUR,Solapur Jn,03:20,03:25,1
+,,,5,KLBG,Kalaburagi,04:52,04:55,1
+,,,6,WADI,Wadi,05:58,06:00,1
+,,,7,YG,Yadgir,06:33,06:35,1
+,,,8,RC,Raichur,07:38,07:40,1
+,,,9,MALM,Manthralayam Rd,08:03,08:05,1
+,,,10,AD,Adoni,08:38,08:40,1
+,,,11,GTL,Guntakal Jn,09:30,09:40,1
+,,,12,GY,Gooty,10:13,10:15,1
+,,,13,TU,Tadipatri,10:58,11:00,1
+,,,14,KDP,Kondapuram,11:14,11:15,1
+,,,15,YA,Yerraguntla,11:48,11:50,1
+,,,16,HX,Cuddapah,12:23,12:25,1
+,,,17,NRE,Nandalur,12:49,12:50,1
+,,,18,RJP,Razampeta,12:59,13:00,1
+,,,19,KOU,Koduru,13:29,13:30,1
+,,,20,RU,Renigunta Jn,14:30,14:40,1
+,,,21,TPTY,Tirupati,15:10,15:15,1
+,,,22,PAK,Pakala Jn,15:53,15:55,1
+,,,23,CTO,Chittoor,16:23,16:25,1
+,,,24,KPD,Katpadi Jn,17:40,17:45,1
+,,,25,JTJ,Jolarpettai,19:13,19:15,1
+,,,26,BQI,Bommidi,20:09,20:10,1
+,,,27,SA,Salem Jn,20:50,20:55,1
+,,,28,ED,Erode Jn,21:50,21:55,1
+,,,29,TUP,Tiruppur,22:38,22:40,1
+,,,30,CBE,Coimbatore Jn,23:35,23:40,1
+,,,31,PGT,Palakkad Jn,01:15,01:20,2
+,,,32,OTP,Ottappalam,01:44,01:45,2
+,,,33,TCR,Thrisur,02:25,02:28,2
+,,,34,AFK,Angamali,03:10,03:11,2
+,,,35,AWY,Aluva,03:22,03:24,2
+,,,36,ERN,Ernakulam Town,03:45,03:50,2
+,,,37,TRTR,Triupunittura,04:09,04:10,2
+,,,38,KTYM,Kottayam,05:00,05:03,2
+,,,39,CGY,Changanaseri,05:19,05:20,2
+,,,40,TRVL,Tiruvalla,05:29,05:30,2
+,,,41,CNGR,Chengannur,05:40,05:42,2
+,,,42,MVLK,Mavelikara,05:53,05:54,2
+,,,43,KYJ,Kayankulam Jn,06:03,06:05,2
+,,,44,KPY,Karunagapalli,06:21,06:22,2
+,,,45,QLN,Kollam Jn,07:07,07:10,2
+,,,46,PVU,Paravur,07:28,07:29,2
+,,,47,VAK,Varkalasivagiri,07:40,07:41,2
+,,,48,KVU,Kadakavur,07:51,07:52,2
+,,,49,CRY,Chirayinkeezh,07:57,07:58,2
+,,,50,TVP,Trivandrum Pett,08:34,08:35,2
+,,,51,TVC,Trivandrum Cntl,09:00,09:05,2
+,,,52,NYY,Neyyattinkara,09:31,09:32,2
+,,,53,PASA,Parashshala,09:47,09:48,2
+,,,54,KZT,Kulitthurai,09:59,10:00,2
+,,,55,ERL,Eraniel,10:15,10:16,2
+,,,56,NCJ,Nagercoil Jn,10:35,10:40,2
+,,,57,CAPE,Kanyakumari,11:55,,2

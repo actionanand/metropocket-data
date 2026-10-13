@@ -1,0 +1,59 @@
+train_number,train_name,running_days,stop_sequence,station_code,station_name,arrival_time,departure_time,day_offset
+16382,CAPE Pune Express,,1,CAPE,Kanyakumari,,08:40,0
+,,,2,NCJ,Nagercoil Jn,09:00,09:05,0
+,,,3,ERL,Eraniel,09:21,09:22,0
+,,,4,KZT,Kulitthurai,09:37,09:38,0
+,,,5,PASA,Parashshala,09:47,09:48,0
+,,,6,NYY,Neyyattinkara,10:00,10:01,0
+,,,7,TVC,Trivandrum Cntl,10:35,10:40,0
+,,,8,CRY,Chirayinkeezh,11:05,11:06,0
+,,,9,KVU,Kadakavur,11:10,11:11,0
+,,,10,VAK,Varkalasivagiri,11:22,11:23,0
+,,,11,PVU,Paravur,11:34,11:35,0
+,,,12,QLN,Kollam Jn,11:52,11:55,0
+,,,13,KPY,Karunagapalli,12:20,12:21,0
+,,,14,KYJ,Kayankulam Jn,12:36,12:38,0
+,,,15,MVLK,Mavelikara,12:47,12:48,0
+,,,16,CNGR,Chengannur,12:59,13:01,0
+,,,17,TRVL,Tiruvalla,13:10,13:11,0
+,,,18,CGY,Changanaseri,13:19,13:20,0
+,,,19,KTYM,Kottayam,13:47,13:50,0
+,,,20,ERN,Ernakulam Town,15:05,15:10,0
+,,,21,AWY,Aluva,15:33,15:35,0
+,,,22,AFK,Angamali,15:46,15:47,0
+,,,23,CKI,Chalakudi,16:03,16:04,0
+,,,24,IJK,Irinjalakuda,16:14,16:15,0
+,,,25,TCR,Thrisur,16:47,16:50,0
+,,,26,WKI,Wadakancheri,17:09,17:10,0
+,,,27,OTP,Ottappalam,18:01,18:02,0
+,,,28,PGT,Palakkad Jn,18:27,18:30,0
+,,,29,CBE,Coimbatore Jn,19:55,20:00,0
+,,,30,TUP,Tiruppur,20:48,20:50,0
+,,,31,ED,Erode Jn,21:45,21:55,0
+,,,32,SA,Salem Jn,22:50,22:55,0
+,,,33,BQI,Bommidi,23:29,23:30,0
+,,,34,JTJ,Jolarpettai,01:08,01:10,1
+,,,35,KPD,Katpadi Jn,02:05,02:10,1
+,,,36,PAK,Pakala Jn,03:09,03:10,1
+,,,37,TPTY,Tirupati,04:30,04:35,1
+,,,38,RU,Renigunta Jn,04:55,05:05,1
+,,,39,KOU,Koduru,05:39,05:40,1
+,,,40,RJP,Razampeta,06:04,06:05,1
+,,,41,NRE,Nandalur,06:19,06:20,1
+,,,42,HX,Cuddapah,06:53,06:55,1
+,,,43,YA,Yerraguntla,07:28,07:30,1
+,,,44,KDP,Kondapuram,07:59,08:00,1
+,,,45,TU,Tadipatri,08:19,08:20,1
+,,,46,GY,Gooty,08:58,09:00,1
+,,,47,GTL,Guntakal Jn,09:30,09:40,1
+,,,48,AD,Adoni,10:28,10:30,1
+,,,49,MALM,Manthralayam Rd,11:03,11:05,1
+,,,50,RC,Raichur,11:43,11:45,1
+,,,51,YG,Yadgir,12:48,12:50,1
+,,,52,WADI,Wadi,14:05,14:07,1
+,,,53,KLBG,Kalaburagi,14:52,14:55,1
+,,,54,SUR,Solapur Jn,17:00,17:05,1
+,,,55,KWV,Kurduvadi,18:03,18:05,1
+,,,56,KEM,Kem,18:23,18:25,1
+,,,57,DD,Daund Jn,20:10,20:15,1
+,,,58,PUNE,Pune Jn,21:40,,1

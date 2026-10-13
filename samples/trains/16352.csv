@@ -1,0 +1,42 @@
+train_number,train_name,running_days,stop_sequence,station_code,station_name,arrival_time,departure_time,day_offset
+16352,NCJ LTT Express,THU|SUN,1,NCJ,Nagercoil Jn,,06:15,0
+,,,2,VLY,Valliyur,06:49,06:50,0
+,,,3,NNN,Nanguneri,07:00,07:01,0
+,,,4,TEN,Tirunelveli,08:00,08:05,0
+,,,5,CVP,Kovilpatti,08:53,08:55,0
+,,,6,SRT,Satur,09:13,09:15,0
+,,,7,VPT,Virudunagar Jn,09:38,09:40,0
+,,,8,MDU,Madurai Jn,10:45,10:50,0
+,,,9,TPJ,Tiruchchirappalli,13:25,13:30,0
+,,,10,SRGM,Srirangam,13:48,13:50,0
+,,,11,ALU,Ariyalur,14:30,14:31,0
+,,,12,VRI,Vridhachalam Jn,15:04,15:06,0
+,,,13,VM,Villupuram Jn,16:10,16:15,0
+,,,14,TMV,Tindivanam,16:48,16:50,0
+,,,15,MLMR,Melmaruvattur,17:13,17:15,0
+,,,16,CGL,Chengalpattu,18:15,18:30,0
+,,,17,CJ,Kanchipuram,19:13,19:15,0
+,,,18,AJJ,Arakkonam Jn,20:15,21:10,0
+,,,19,TRT,Tiruttani,21:28,21:30,0
+,,,20,RU,Renigunta Jn,22:25,22:35,0
+,,,21,KOU,Koduru,23:14,23:15,0
+,,,22,RJP,Razampeta,23:43,23:45,0
+,,,23,HX,Cuddapah,00:28,00:30,1
+,,,24,TU,Tadipatri,01:48,01:50,1
+,,,25,GY,Gooty,02:39,02:40,1
+,,,26,GTL,Guntakal Jn,03:15,03:20,1
+,,,27,AD,Adoni,04:03,04:05,1
+,,,28,MALM,Manthralayam Rd,04:38,04:40,1
+,,,29,RC,Raichur,05:18,05:20,1
+,,,30,YG,Yadgir,06:20,06:22,1
+,,,31,WADI,Wadi,07:35,07:37,1
+,,,32,SDB,Shahabad,07:52,07:53,1
+,,,33,KLBG,Kalaburagi,08:12,08:15,1
+,,,34,SUR,Solapur Jn,10:20,10:25,1
+,,,35,KWV,Kurduvadi,11:28,11:30,1
+,,,36,DD,Daund Jn,13:45,13:50,1
+,,,37,PUNE,Pune Jn,15:05,15:10,1
+,,,38,LNL,Lonavala,16:22,16:25,1
+,,,39,KYN,Kalyan Jn,17:47,17:50,1
+,,,40,TNA,Thane,18:07,18:10,1
+,,,41,LTT,Lokmanyatilak T,18:50,,1
